@@ -9,11 +9,32 @@ class Acl {
     init(router, store, fail) {
 				this.router = router
 				this.store = store
-        this.fail = fail || DEFAULT_FAIL
+	
+				this.fail = fail || DEFAULT_FAIL
+				try {
+					let msg = ''
+					if (! ('user' in this.store.state)) {
+						msg += '\n\tMissing key \'user\' in\n\tstore.state'
+					}
+					if (! ('roles' in this.store.state.user)) {
+						msg += '\n\tMissing key \'roles\' in\n\tstore.state.user'
+					}
+					if (msg.length>0) {
+						throw new Error(msg)
+					}
+				} catch (ex) {
+					console.error('Exception in vue2-acl-ext init', ex.message)
+					console.error(
+						'\n\t********* FATAL ERROR *********\n'+
+						'\n\tFatal error in\n\tvue2-acl-ext ACL plugin'+ 
+						ex.message + 
+						'\n\n\t********* FATAL ERROR *********\n\n'
+					)
+				}
     }
 
 		currentPerms() {
-			const r = this.store.getters['GET_USER'].roles
+			const r = this.store.state.user.roles // this.store.getters['GET_USER'].roles
 			return r.length < 2 ? DEFAULT_PERMS : r.trim()
 		}
 
