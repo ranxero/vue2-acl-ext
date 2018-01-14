@@ -30,7 +30,7 @@ npm install vue2-acl-ext --save
 ```js
 import Router from '../routes/router'
 import Store from '../store/store'
-import Acl from 'vue-acl'
+import Acl from 'vue2-acl-ext'
 Vue.use( Acl, { router: Router, store: Store, fail: '/error' } )
 ```
 >> the former parameter 'save' has been removed as the user's roles 
