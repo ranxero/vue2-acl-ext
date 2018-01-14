@@ -6,22 +6,8 @@
   "scripts": {
     "build": "babel ./src/vue2-acl-ext.js --out-file ./dist/vue2-acl-ext.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ranxero/vue2-acl-ext.git"
-  },
-  "keywords": [
-    "acl",
-    "vuejs",
-    "control",
-    "user"
-  ],
   "author": "Christian Schluessel",
-  "license": "GNU",
-  "bugs": {
-    "url": "https://github.com/ranxero/vue2-acl-ext/issues"
-  },
-  "homepage": "https://github.com/ranxero/vue2-acl-ext#readme",
+  "license": "ISC",
   "devDependencies": {
     "ava": "^0.23.0",
     "babel-cli": "^6.26.0",
