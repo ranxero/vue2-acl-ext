@@ -1,13 +1,21 @@
 {
   "name": "vue2-acl-ext",
   "version": "1.0.0",
-  "description": "ACL plugin for Vue2. Inspired by vue-acl but using sotre.state.user.roles to check access",
+  "description": "ACL plugin for Vue2. Inspired by vue-acl using sotre.state.user.roles to check access",
   "main": "dist/vue2-acl-ext.js",
   "scripts": {
     "build": "babel ./src/vue2-acl-ext.js --out-file ./dist/vue2-acl-ext.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranxero/vue2-acl-ext.git"
+  },
   "author": "Christian Schluessel",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranxero/vue2-acl-ext/issues"
+  },
+  "homepage": "https://github.com/ranxero/vue2-acl-ext#readme",
   "devDependencies": {
     "ava": "^0.23.0",
     "babel-cli": "^6.26.0",
