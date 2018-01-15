@@ -1,6 +1,14 @@
 "use strict"
 
-const DEFAULT_PERMS = 'PUB'
+/**
+ * Vue2 ACL with user roles maintained in a Vuex store.
+ * This code is inspired by 
+ * vue-acl by leonardo vilarinho'
+ * on github 
+ * https://github.com/leonardovilarinho/vue-acl
+ */
+
+ const DEFAULT_PERMS = 'PUB'
 const DEFAULT_FAIL = '/login'
 
 class Acl {
