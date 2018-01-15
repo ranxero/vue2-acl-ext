@@ -16,8 +16,6 @@ model
 
 ### Installation
 
-We have two methods of installed, you can use the npm or a standalone.
-
 #### To install with NPM
 
 Use the following command to install as dependency:
@@ -26,7 +24,7 @@ npm install vue2-acl-ext --save
 ```
 ### Get Started:
 
-**[1]:** Import the plugin and register it on VueJS, it is necessary to send as a parameter the vue router-router and the Vuex store with as user.roles string inside the state:
+**[1]:** Import the plugin and register it on VueJS, it is necessary to send as a parameter the vue router-router and the Vuex store with a user.roles string inside the state:
 
 ```js
 import Router from '../routes/router'
@@ -87,7 +85,7 @@ Vue.use( Acl, { router: Router, store: Store, fail: '/error' } )
 This method receives a parameter with the permissions to check, separated by a pipe (|) or ampersand (&), and returns a `bool` saying if permission has been granted.
 
 NOTE:
-the current system's permission cannt be changed via the global 
+the current system's permission cannot be changed via the global 
 attribute `access`. 
 setting new system permissions must happen via update on 
 store.state.user.roles inside the Vues store
