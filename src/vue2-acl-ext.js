@@ -8,7 +8,7 @@
  * https://github.com/leonardovilarinho/vue-acl
  */
 
- const DEFAULT_PERMS = 'PUB'
+const DEFAULT_PERMS = 'PUB'
 const DEFAULT_FAIL = '/login'
 
 class Acl {
