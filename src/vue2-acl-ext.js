@@ -69,14 +69,14 @@ class Acl {
 		router.beforeEach(function (to, from, next) {
 			const fail = to.meta.fail || _this.fail
 			try {
-							const perm = to.meta.permission || DEFAULT_PERMS
-							if (perm == DEFAULT_PERMS) 
-								return next()
+				const perm = to.meta.permission || DEFAULT_PERMS
+				if (perm == DEFAULT_PERMS) 
+					return next()
 
-							if (!_this.check(perm)) 
-								return next(fail)
+				if (!_this.check(perm)) 
+					return next(fail)
 
-							return next()
+				return next()
 			} catch (ex) {
 				return next(fail)
 			}
