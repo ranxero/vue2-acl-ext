@@ -3,6 +3,7 @@
 # Plugin of Access Control List from Vue JS 2 - vue-acl
 
 https://github.com/leonardovilarinho/vue-acl
+
 Documentation only contains relevant aspects of the modification
 The modification switches the role model to a 
 Vuex store.state.user.roles 
